@@ -27,6 +27,10 @@ def organize_files(directory):
                     shutil.move(file_path, folder_path)
                     break
 
+def organize_files(directory):
+    for file in os.listdir(directory):
+        file_path = os.path.join(directory, file)
+
 if __name__ == "__main__":
     target_directory = input("Enter directory path to organize: ")
     organize_files(target_directory)
