@@ -2,12 +2,7 @@ import os
 import shutil
 
 FILE_TYPES = {
-    "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
-    "Documents": [".pdf", ".docx", ".txt", ".pptx", ".xlsx"],
-    "Videos": [".mp4", ".mkv", ".avi"],
-    "Music": [".mp3", ".wav"],
-    "Archives": [".zip", ".rar", ".7z"]
-}
+   
         if os.path.isfile(file_path):
             for folder, extensions in FILE_TYPES.items():
                 if file.lower().endswith(tuple(extensions)):
@@ -30,7 +25,12 @@ def organize_files(directory):
 def organize_files(directory):
     for file in os.listdir(directory):
         file_path = os.path.join(directory, file)
-
+ "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
+    "Documents": [".pdf", ".docx", ".txt", ".pptx", ".xlsx"],
+    "Videos": [".mp4", ".mkv", ".avi"],
+    "Music": [".mp3", ".wav"],
+    "Archives": [".zip", ".rar", ".7z"]
+}
 if __name__ == "__main__":
     target_directory = input("Enter directory path to organize: ")
     organize_files(target_directory)
