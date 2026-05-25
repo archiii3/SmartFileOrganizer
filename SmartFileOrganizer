@@ -25,6 +25,9 @@ def organize_files(directory):
 def organize_files(directory):
     for file in os.listdir(directory):
         file_path = os.path.join(directory, file)
+def organize_files(directory):
+    for file in os.listdir(directory):
+        file_path = os.path.join(directory, file)
  "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
     "Documents": [".pdf", ".docx", ".txt", ".pptx", ".xlsx"],
     "Videos": [".mp4", ".mkv", ".avi"],
