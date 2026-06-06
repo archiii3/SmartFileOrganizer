@@ -39,3 +39,11 @@ if __name__ == "__main__":
     organize_files(target_directory)
     print("✅ Files organized successfully!")
 python smart_file_organizer.py
+
+        if os.path.isfile(file_path):
+            for folder, extensions in FILE_TYPES.items():
+                if file.lower().endswith(tuple(extensions)):
+                    folder_path = os.path.join(directory, folder)
+                    os.makedirs(folder_path, exist_ok=True)
+                    shutil.move(file_path, folder_path)
+                    break
